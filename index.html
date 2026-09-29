@@ -3,294 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#f7f4f9">
+    <meta name="description" content="Portfólio de Paulo H. Amaral, estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web em formação.">
+    <meta property="og:title" content="Paulo H. Amaral | Desenvolvedor Web">
+    <meta property="og:description" content="Conheça projetos web de Paulo H. Amaral em Python, Flask, PHP e JavaScript.">
+    <meta property="og:type" content="website">
+    <title>Paulo H. Amaral | Desenvolvedor Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navegação -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">Meu Portfólio</div>
-            <ul class="nav-menu">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Navegação principal">
+            <a class="brand" href="#inicio" aria-label="Paulo H. Amaral, início">
+                <span class="brand-mark" aria-hidden="true">P</span>
+                <span>Paulo H. Amaral</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#objetivo">Objetivo</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="Img/eu.jpeg" alt="Paulo" class="profile-image">
-                <h1 class="hero-title">Olá, eu sou o Paulo<br><span class="highlight">Um Dev em formação</span></h1>
-                <p class="hero-subtitle">Criando soluções inovadoras através de codigos</p>
-                <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+    <main id="conteudo">
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-inner container">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Estudante de ADS e desenvolvedor web em formação</p>
+                    <h1 id="hero-title">Olá, sou o Paulo.<br><span>Gosto de construir para a web.</span></h1>
+                    <p class="hero-description">Sou estudante de Análise e Desenvolvimento de Sistemas e desenvolvedor web em formação. Trabalho com Python, Flask, PHP e JavaScript para criar projetos úteis e fáceis de usar.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projetos">Conheça meus projetos</a>
+                        <a class="button button-text" href="#contato">Entre em contato <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="hero-socials" aria-label="Perfis profissionais">
+                        <a href="https://github.com/PauloKT" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                        <a href="https://www.linkedin.com/in/paulo-h-amaral" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
+                <div class="hero-portrait-wrap">
+                    <img class="hero-portrait" src="Img/eu.jpeg" alt="Paulo H. Amaral" fetchpriority="high">
+                </div>
             </div>
-        </div>
-    </section>
+            <a class="scroll-cue" href="#sobre"><span aria-hidden="true">↓</span> Role para conhecer</a>
+        </section>
 
-    <!-- Sobre Mim -->
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Sou estudante de Análise e Desenvolvimento de Sistemas, apaixonado por 
-                        tecnologia e desenvolvimento de software. Possuo sólida base em lógica de 
-                        programação e perfil autodidata, sempre buscando aprender e me aprimorar 
-                        constantemente.
-                    </p>
-                    <p>
-                        Tenho experiência prática com desenvolvimento web e banco de dados, além de 
-                        trabalhar com ferramentas como Git, Postman e DBeaver. Valorizo a boa 
-                        comunicação, o comprometimento e o trabalho em equipe, buscando oportunidades 
-                        para aplicar e aprimorar minhas habilidades em projetos colaborativos que 
-                        integrem tecnologia, inovação e trabalho em equipe.
-                    </p>
-                    <div class="skills">
-                        <h3>Habilidades</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">PHP</span>
+        <section class="section about-section" id="sobre" aria-labelledby="about-title">
+            <div class="container about-layout">
+                <div class="section-heading">
+                    <p class="section-kicker">Um pouco sobre mim</p>
+                    <h2 id="about-title">Aprender, construir<br>e melhorar.</h2>
+                </div>
+                <div class="about-copy">
+                    <p>Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência prática em desenvolvimento web e banco de dados. Gosto de entender o problema, experimentar soluções e aprender com cada projeto.</p>
+                    <p>Estou aberto a oportunidades para colaborar com equipes de desenvolvimento e continuar crescendo na área.</p>
+                    <div class="skills-block">
+                        <h3>Ferramentas que uso</h3>
+                        <div class="skills-list" aria-label="Tecnologias e ferramentas">
+                            <span>Python</span><span>Flask</span><span>PHP</span><span>JavaScript</span>
+                            <span>HTML e CSS</span><span>MySQL</span><span>PostgreSQL</span><span>C</span>
+                            <span>Git</span><span>Postman</span><span>DBeaver</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Objetivo Profissional -->
-    <section id="objetivo" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Objetivo Profissional</h2>
-            <div class="objective-content">
-                <div class="objective-card">
-                    <div class="objective-icon"><img src="Img/cute-cat-cutie.gif" alt="Missão" class="objective-gif"></div>
-                    <h3>Missão</h3>
-                    <p>
-                        Meu objetivo é trabalhar em projetos desafiadores que me permitam 
-                        crescer profissionalmente e contribuir para o sucesso da equipe. 
-                        Busco oportunidades onde posso aplicar minhas habilidades técnicas 
-                        e aprender com profissionais experientes.
-                    </p>
+        <section class="section projects-section" id="projetos" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="projects-heading">
+                    <div class="section-heading">
+                        <p class="section-kicker">Trabalho em andamento</p>
+                        <h2 id="projects-title">Projetos em destaque</h2>
+                    </div>
+                    <p class="projects-intro">Uma seleção de projetos pessoais e acadêmicos. Cada um me ensinou algo novo sobre desenvolvimento e sobre as pessoas que usam o que a gente cria.</p>
                 </div>
-                <div class="objective-card">
-                    <div class="objective-icon"><img src="Img/cat-eating-chips.gif" alt="Visão" class="objective-gif"></div>
-                    <h3>Visão</h3>
-                    <p>
-                        Aspiro me tornar um desenvolvedor sênior, especializado em criar 
-                        aplicações escaláveis e de alta performance. Quero liderar projetos 
-                        inovadores e compartilhar conhecimento com a comunidade de desenvolvedores.
-                    </p>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-cover project-cover-rpg" role="img" aria-label="Composição gráfica para o projeto de RPG RPyG">
+                            <span class="project-cover-label">RPyG / AEMS</span>
+                            <strong>Roleplay<br>Game</strong>
+                            <span class="project-cover-detail">Personagens, aventuras e combate</span>
+                            <span class="project-cover-emblem" aria-hidden="true">D20</span>
+                        </div>
+                        <div class="project-copy">
+                            <p class="project-kind">Projeto acadêmico em equipe</p>
+                            <h3>RPyG — RPG de aventura</h3>
+                            <p>Aplicação em Flask para criar personagens, consultar monstros e jogar aventuras de combate inspiradas em Dungeons &amp; Dragons.</p>
+                            <p class="project-contribution">Contribuí com as telas e estilos das aventuras de baú e monstros, além de ajustes no fluxo de combate.</p>
+                            <div class="project-tech" aria-label="Tecnologias usadas">
+                                <span>Python</span><span>Flask</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link project-link-primary" href="https://github.com/PauloKT/RPyG-faculdade" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-cover project-cover-satellite" role="img" aria-label="Ilustração do painel de monitoramento de satélites">
+                            <span class="satellite-orbit satellite-orbit-one" aria-hidden="true"></span>
+                            <span class="satellite-orbit satellite-orbit-two" aria-hidden="true"></span>
+                            <span class="satellite-point" aria-hidden="true">✦</span>
+                            <div class="satellite-cover-copy">
+                                <span class="project-cover-label">Painel de telemetria</span>
+                                <strong>Satellite<br>Monitoring</strong>
+                                <span class="project-cover-detail">Hubble, ISS e NOAA-19</span>
+                            </div>
+                        </div>
+                        <div class="project-copy">
+                            <p class="project-kind">Projeto individual</p>
+                            <h3>Satellite Monitoring System</h3>
+                            <p>Painel que acompanha dados simulados de status e telemetria de Hubble, ISS e NOAA-19, com gráficos de temperatura, bateria e posição.</p>
+                            <p class="project-contribution">Desenvolvi o sistema completo, com dois serviços FastAPI, banco de dados e dashboard web com atualização periódica.</p>
+                            <div class="project-tech" aria-label="Tecnologias usadas">
+                                <span>Python</span><span>FastAPI</span><span>SQLAlchemy</span><span>SQLite</span><span>JavaScript</span><span>Chart.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link project-link-primary" href="https://github.com/PauloKT/Satellite-Monitoring-System-Project" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media" aria-label="Capturas de tela do site de segurança digital AEMS">
+                            <figure><img src="Img/captura_on_3.png" alt="Página do projeto AEMS sobre ataques virtuais" loading="lazy"></figure>
+                            <figure><img src="Img/captura_on_2.png" alt="Conteúdo educativo do projeto AEMS sobre segurança digital" loading="lazy"></figure>
+                        </div>
+                        <div class="project-copy">
+                            <p class="project-kind">Projeto acadêmico em equipe</p>
+                            <h3>AEMS — Alerta de Segurança Digital</h3>
+                            <p>Site de conscientização sobre golpes e proteção online, com um quiz que avalia riscos e recomenda medidas de segurança.</p>
+                            <p class="project-contribution">Na branch <code>feature-quiz-sistema-especialista</code>, converti o questionário em um sistema de inferência por regras. Na <code>rede-neural</code>, adicionei uma API Flask com modelo PyTorch e seleção adaptativa de perguntas.</p>
+                            <div class="project-tech" aria-label="Tecnologias usadas">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Flask</span><span>PyTorch</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link project-link-primary" href="https://erickeffre1332.github.io/aems-tads.github.io/" target="_blank" rel="noopener noreferrer">Visitar site <span aria-hidden="true">↗</span></a>
+                                <a class="project-link" href="https://github.com/brennosantiago/aems-tads.github.io" target="_blank" rel="noopener noreferrer">Ver repositório <span aria-hidden="true">↗</span></a>
+                                <a class="project-link" href="https://github.com/brennosantiago/aems-tads.github.io/tree/feature-quiz-sistema-especialista" target="_blank" rel="noopener noreferrer">Branch do quiz <span aria-hidden="true">↗</span></a>
+                                <a class="project-link" href="https://github.com/brennosantiago/aems-tads.github.io/tree/rede-neural" target="_blank" rel="noopener noreferrer">Branch rede-neural <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-media" aria-label="Capturas de tela do Sistema de Quiz Educacional">
+                            <figure><img src="Img/captura_quiz_2.png" alt="Tela de pergunta do Sistema de Quiz Educacional" loading="lazy"></figure>
+                            <figure><img src="Img/captura_quiz_3.png" alt="Outra tela do Sistema de Quiz Educacional" loading="lazy"></figure>
+                        </div>
+                        <div class="project-copy">
+                            <p class="project-kind">Aplicação web</p>
+                            <h3>Sistema de Quiz Educacional</h3>
+                            <p>Aplicação em Flask com autenticação, categorias, níveis de dificuldade, pontuação e efeitos sonoros.</p>
+                            <div class="project-tech" aria-label="Tecnologias usadas">
+                                <span>Python</span><span>Flask</span><span>MySQL</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link project-link-primary" href="https://github.com/PauloKT/Quiz" target="_blank" rel="noopener noreferrer">Ver código <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="objective-card">
-                    <div class="objective-icon"><img src="Img/gatodancing.gif" alt="Valores" class="objective-gif"></div>
-                    <h3>Valores</h3>
-                    <p>
-                        Acredito em código limpo, boas práticas de desenvolvimento, trabalho 
-                        em equipe e aprendizado contínuo. Valorizo a comunicação clara, 
-                        a criatividade e a busca por soluções eficientes.
-                    </p>
+
+                <p class="more-projects">Mais experimentos e código no <a href="https://github.com/PauloKT" target="_blank" rel="noopener noreferrer">meu GitHub <span aria-hidden="true">↗</span></a>.</p>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contato" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+                <div class="contact-copy">
+                    <p class="section-kicker">Vamos conversar?</p>
+                    <h2 id="contact-title">Tem um projeto<br>ou uma oportunidade?</h2>
+                    <p>Estou aberto a boas conversas sobre tecnologia, desenvolvimento web e novos desafios.</p>
+                    <a class="button button-light" href="mailto:paulohamaral89@gmail.com">Fale comigo por e-mail <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="contact-aside">
+                    <img src="Img/gatodancing.gif" alt="" width="96" height="96" loading="lazy">
+                    <p>Também me encontre por aqui:</p>
+                    <a href="https://www.linkedin.com/in/paulo-h-amaral" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                    <a href="https://github.com/PauloKT" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Projetos -->
-    <section id="projetos" class="section">
-        <div class="container">
-            <h2 class="section-title">Meus Projetos</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Img/reviva.png" alt="Reviva Green" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>Reviva Green - Plataforma de Logística Reversa</h3>
-                        <p>Plataforma web inovadora desenvolvida por mim que conecta empresas, cooperativas, catadores e indústrias recicladoras. Sistema robusto que viabiliza a economia circular, otimizando fluxos de reciclagem e promovendo sustentabilidade ambiental através de microserviços escaláveis e interface intuitiva.</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Web Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://revivagreen.com.br/" class="btn btn-secondary" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Img/on.png" alt="Online Risks" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>Online Risks</h3>
-                        <p>Site educativo sobre os riscos da internet desenvolvido em grupo durante a faculdade. Projeto focado em conscientização sobre segurança digital e os perigos presentes no ambiente online.</p>
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Web Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://erickeffre1332.github.io/aems-tads.github.io/" class="btn btn-secondary" target="_blank">Ver Projeto</a>
-                            <a href="https://github.com/PauloKT/Online-Risks" class="btn btn-outline" target="_blank">Código</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="Img/show.png" alt="" class="project-img">
-                    </div>
-                    <div class="project-content">
-                        <h3>Sistema de Quiz Educacional</h3>
-                        <p>Sistema de quiz educacional desenvolvido em Flask com interface web moderna. Inclui autenticação de usuários, quiz interativo com categorias e dificuldades, sistema de pontuação e efeitos sonoros para melhor experiência do usuário.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>MySQL</span>
-                            <span>JavaScript</span>
-                            <span>HTML/CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/PauloKT/Quiz" class="btn btn-outline" target="_blank">Código</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-footer">
-                <p>Veja mais projetos no meu <a href="https://github.com/PauloKT" target="_blank">GitHub</a> e <a href="https://www.linkedin.com/in/paulo-h-amaral" target="_blank">LinkedIn</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria de Imagens -->
-    <section id="galeria" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Galeria de Imagens</h2>
-            <!-- Grid para Desktop -->
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openGallery(0)">
-                    <img src="Img/captura_reviva_1.png" alt="Galeria de imagens" />
-                </div>
-                <div class="gallery-item" onclick="openGallery(1)">
-                    <img src="Img/captura_reviva_2.png" alt="Galeria de imagens" />
-                </div>
-                <div class="gallery-item" onclick="openGallery(2)">
-                    <img src="Img/captura_on_3.png" alt="Galeria de imagens" />
-                </div>
-                <div class="gallery-item" onclick="openGallery(3)">
-                    <img src="Img/captura_on_2.png" alt="Galeria de imagens" />
-                </div>
-                <div class="gallery-item" onclick="openGallery(4)">
-                    <img src="Img/captura_quiz_2.png" alt="Galeria de imagens" />
-                </div>
-                <div class="gallery-item" onclick="openGallery(5)">
-                    <img src="Img/captura_quiz_3.png" alt="Galeria de imagens" />
-                </div>
-            </div>
-            <!-- Carrossel para Mobile -->
-            <div class="gallery-carousel-wrapper">
-                <div class="gallery-carousel">
-                    <div class="gallery-carousel-item" onclick="openGallery(0)">
-                        <img src="Img/captura_reviva_1.png" alt="Galeria de imagens" />
-                    </div>
-                    <div class="gallery-carousel-item" onclick="openGallery(1)">
-                        <img src="Img/captura_reviva_2.png" alt="Galeria de imagens" />
-                    </div>
-                    <div class="gallery-carousel-item" onclick="openGallery(2)">
-                        <img src="Img/captura_on_3.png" alt="Galeria de imagens" />
-                    </div>
-                    <div class="gallery-carousel-item" onclick="openGallery(3)">
-                        <img src="Img/captura_on_2.png" alt="Galeria de imagens" />
-                    </div>
-                    <div class="gallery-carousel-item" onclick="openGallery(4)">
-                        <img src="Img/captura_quiz_2.png" alt="Galeria de imagens" />
-                    </div>
-                    <div class="gallery-carousel-item" onclick="openGallery(5)">
-                        <img src="Img/captura_quiz_3.png" alt="Galeria de imagens" />
-                    </div>
-                </div>
-                <div class="gallery-dots" id="galleryDots"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal de Galeria -->
-    <div id="galleryModal" class="gallery-modal">
-        <div class="gallery-modal-content">
-            <span class="gallery-modal-close" onclick="closeGallery()">&times;</span>
-            <span class="gallery-modal-prev" onclick="changeGallery(-1)">&#10094;</span>
-            <img class="gallery-modal-img" id="galleryModalImg" src="" alt="Imagem em tamanho grande" />
-            <span class="gallery-modal-next" onclick="changeGallery(1)">&#10095;</span>
-        </div>
-    </div>
-
-    <!-- Contato -->
-    <section id="contato" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-content">
-                <p class="contact-text">
-                    Estou sempre aberto a novas oportunidades e conversas interessantes. 
-                    Sinta-se à vontade para entrar em contato!
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:paulohamaral89@gmail.com" class="contact-link" data-email="paulohamaral89@gmail.com">
-                        <span class="contact-icon">
-                            <img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=FFFFFF" alt="">
-                        </span>
-                        <span>Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/paulo-h-amaral" class="contact-link" target="_blank" rel="noopener noreferrer">
-                        <span class="contact-icon">
-                            <img src="https://img.icons8.com/?size=100&id=8808&format=png&color=FFFFFF" alt="">
-                        </span>
-                        <span>LinkedIn</span>
-                    </a>
-                    <a href="https://github.com/PauloKT" class="contact-link" target="_blank">
-                        <span class="contact-icon">
-                            <img src="https://img.icons8.com/?size=100&id=12599&format=png&color=FFFFFF" alt="">
-                        </span>
-                        <span>GitHub</span>
-                    </a>
-                </div>
-                <div class="contact-meme">
-                    <img src="Img/cat-funny.gif" alt="Meme contato" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true">P</span><span>Paulo H. Amaral</span></a>
+            <p>Feito com curiosidade e vontade de aprender.</p>
+            <p>© <span id="current-year">2026</span> Paulo H. Amaral</p>
         </div>
     </footer>
-
-    <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
 
     <script src="script.js"></script>
 </body>
