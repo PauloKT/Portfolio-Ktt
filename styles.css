@@ -1,16 +1,14 @@
 :root {
     color-scheme: dark;
-    --page: #15121a;
-    --surface: #1d1923;
-    --surface-soft: #25202c;
-    --ink: #f4eef8;
-    --muted: #b8aebb;
-    --accent: #c8a2e8;
-    --accent-dark: #dec7f1;
-    --accent-soft: #463650;
-    --line: #3a3342;
-    --deep: #251a30;
-    --deep-muted: #d0c3d8;
+    --page: #000;
+    --surface: #0b0b0b;
+    --surface-soft: #111;
+    --ink: #f5f5f5;
+    --muted: #b7b7b7;
+    --accent: #9272f4;
+    --line: rgb(255 255 255 / 38%);
+    --deep: #000;
+    --deep-muted: #b7b7b7;
     --content-width: 1120px;
     --heading-font: 'Space Grotesk', sans-serif;
     --body-font: 'DM Sans', sans-serif;
@@ -48,8 +46,8 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #d2acef;
-    outline-offset: 4px;
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .container {
@@ -64,9 +62,9 @@ button:focus-visible {
     left: 12px;
     padding: 10px 16px;
     transform: translateY(-160%);
-    border-radius: 8px;
-    background: var(--deep);
-    color: #fff;
+    border-radius: 0;
+    background: #fff;
+    color: var(--deep);
     text-decoration: none;
 }
 
@@ -78,8 +76,8 @@ button:focus-visible {
     position: sticky;
     z-index: 1000;
     top: 0;
-    border-bottom: 1px solid rgb(244 238 248 / 10%);
-    background: rgb(21 18 26 / 92%);
+    border-bottom: 1px solid var(--line);
+    background: rgb(0 0 0 / 92%);
     backdrop-filter: blur(14px);
 }
 
@@ -106,9 +104,10 @@ button:focus-visible {
     width: 34px;
     height: 34px;
     place-items: center;
-    border-radius: 11px 11px 11px 4px;
-    background: var(--accent);
-    color: var(--deep);
+    border: 1px solid #fff;
+    border-radius: 0;
+    background: transparent;
+    color: var(--accent);
     font-size: 1.05rem;
 }
 
@@ -131,7 +130,7 @@ button:focus-visible {
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-    color: var(--accent);
+    color: #fff;
 }
 
 .menu-toggle {
@@ -144,14 +143,15 @@ button:focus-visible {
     min-height: 670px;
     align-items: center;
     overflow: hidden;
-    background: var(--surface-soft);
+    border-bottom: 1px solid var(--line);
+    background: var(--page);
 }
 
 .hero-inner {
     display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+    grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.8fr);
     align-items: center;
-    gap: clamp(50px, 9vw, 140px);
+    gap: clamp(36px, 5vw, 64px);
     padding-top: 76px;
     padding-bottom: 100px;
 }
@@ -163,7 +163,7 @@ button:focus-visible {
 .eyebrow,
 .section-kicker {
     margin: 0 0 17px;
-    color: var(--accent);
+    color: var(--muted);
     font-size: 0.88rem;
     font-weight: 700;
     letter-spacing: 0.015em;
@@ -179,7 +179,7 @@ button:focus-visible {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #7db98b;
+    background: var(--accent);
 }
 
 .hero h1,
@@ -193,12 +193,12 @@ button:focus-visible {
 
 .hero h1 {
     max-width: 740px;
-    font-size: clamp(3.2rem, 6.6vw, 5.4rem);
+    font-size: clamp(2.3rem, 4vw, 3.25rem);
     line-height: 1.03;
 }
 
 .hero h1 span {
-    color: var(--accent);
+    color: var(--ink);
 }
 
 .hero-description {
@@ -223,7 +223,7 @@ button:focus-visible {
     gap: 9px;
     padding: 12px 21px;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 0;
     font-size: 0.95rem;
     font-weight: 700;
     text-decoration: none;
@@ -235,12 +235,14 @@ button:focus-visible {
 }
 
 .button-primary {
-    background: var(--accent);
+    border-color: #fff;
+    background: #fff;
     color: var(--deep);
 }
 
 .button-primary:hover {
-    background: var(--accent-dark);
+    border-color: #fff;
+    background: #ddd;
 }
 
 .button-text {
@@ -249,7 +251,7 @@ button:focus-visible {
 }
 
 .button-text:hover {
-    color: var(--accent);
+    color: #fff;
 }
 
 .hero-socials {
@@ -269,24 +271,23 @@ button:focus-visible {
 
 .hero-socials a:hover,
 .contact-aside a:hover {
-    color: var(--accent);
+    color: #fff;
 }
 
 .hero-portrait-wrap {
     position: relative;
-    width: min(100%, 330px);
+    width: min(100%, 350px);
     justify-self: end;
-    padding: 12px 12px 38px;
-    border: 1px solid #51435d;
-    border-radius: 170px 170px 18px 18px;
-    background: #2b2432;
+    padding-left: 28px;
+    border-left: 1px solid var(--line);
 }
 
 .hero-portrait {
     display: block;
     width: 100%;
-    aspect-ratio: 0.79;
-    border-radius: 160px 160px 12px 12px;
+    aspect-ratio: 1;
+    border: 1px solid #fff;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center 40%;
 }
@@ -304,7 +305,7 @@ button:focus-visible {
 }
 
 .scroll-cue span {
-    color: var(--accent);
+    color: #fff;
     font-size: 1.1rem;
 }
 
@@ -314,6 +315,7 @@ button:focus-visible {
 
 .about-section {
     background: var(--surface);
+    border-bottom: 1px solid var(--line);
 }
 
 .about-layout {
@@ -363,9 +365,9 @@ button:focus-visible {
     min-height: 32px;
     padding: 5px 11px;
     border: 1px solid var(--line);
-    border-radius: 5px;
-    background: var(--page);
-    color: var(--muted);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
     font-size: 0.8rem;
     font-weight: 600;
 }
@@ -379,7 +381,9 @@ button:focus-visible {
     align-items: end;
     justify-content: space-between;
     gap: 48px;
-    margin-bottom: 43px;
+    margin-bottom: 35px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
 }
 
 .projects-intro {
@@ -400,7 +404,7 @@ button:focus-visible {
     flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--line);
-    border-radius: 12px;
+    border-radius: 0;
     background: var(--surface);
 }
 
@@ -423,19 +427,19 @@ button:focus-visible {
 }
 
 .project-cover-rpg {
-    background: #392c45;
-    color: #fbf3e4;
+    background: #0a0a0a;
+    color: #f5f5f5;
 }
 
 .project-cover-rpg::before {
     position: absolute;
-    top: -120px;
-    right: -75px;
-    width: 300px;
-    aspect-ratio: 1;
-    border: 1px solid rgb(237 212 165 / 30%);
-    border-radius: 50%;
-    box-shadow: 0 0 0 20px rgb(237 212 165 / 5%), 0 0 0 48px rgb(237 212 165 / 5%);
+    top: -75px;
+    right: -55px;
+    width: 230px;
+    height: 230px;
+    transform: rotate(45deg);
+    border: 1px solid rgb(255 255 255 / 20%);
+    border-radius: 0;
     content: '';
 }
 
@@ -458,12 +462,12 @@ button:focus-visible {
 }
 
 .project-cover-label {
-    color: #d7c9e2;
+    color: #dedede;
 }
 
 .project-cover-detail {
     margin-top: 4px;
-    color: #cbbccf;
+    color: #aaa;
 }
 
 .project-cover-emblem {
@@ -475,10 +479,9 @@ button:focus-visible {
     width: 61px;
     height: 61px;
     place-items: center;
-    transform: rotate(9deg);
-    border: 1px solid rgb(251 243 228 / 56%);
-    border-radius: 50%;
-    color: #fbf3e4;
+    border: 1px solid rgb(255 255 255 / 60%);
+    border-radius: 0;
+    color: #fff;
     font-family: var(--heading-font);
     font-size: 0.9rem;
     font-weight: 700;
@@ -486,8 +489,8 @@ button:focus-visible {
 
 .project-cover-satellite {
     justify-content: flex-end;
-    background: #1d2b35;
-    color: #e3f0f3;
+    background: #080808;
+    color: #f5f5f5;
 }
 
 .satellite-cover-copy {
@@ -498,31 +501,27 @@ button:focus-visible {
 }
 
 .satellite-cover-copy .project-cover-label {
-    color: #b5d3dc;
+    color: #dedede;
 }
 
 .satellite-cover-copy .project-cover-detail {
-    color: #c1d7dc;
+    color: #aaa;
 }
 
 .satellite-orbit {
     position: absolute;
-    top: 15px;
-    right: -15px;
-    width: 265px;
-    height: 104px;
-    transform: rotate(-30deg);
-    border: 1px solid rgb(146 204 218 / 45%);
-    border-radius: 50%;
+    top: 49%;
+    right: 0;
+    width: 76%;
+    height: 0;
+    border-top: 1px solid rgb(255 255 255 / 34%);
 }
 
 .satellite-orbit-two {
-    top: -17px;
-    right: 26px;
-    width: 240px;
-    height: 120px;
-    transform: rotate(42deg);
-    border-color: rgb(146 204 218 / 28%);
+    top: 63%;
+    right: 0;
+    width: 55%;
+    border-color: rgb(255 255 255 / 20%);
 }
 
 .satellite-point {
@@ -530,13 +529,13 @@ button:focus-visible {
     top: 40px;
     right: 79px;
     z-index: 1;
-    color: #9ed1dc;
-    font-size: 2.25rem;
+    color: #fff;
+    font-size: 1.1rem;
 }
 
 .project-kind {
     margin: 0 0 9px;
-    color: var(--accent);
+    color: var(--muted);
     font-size: 0.78rem;
     font-weight: 700;
 }
@@ -557,15 +556,16 @@ button:focus-visible {
 
 .project-copy .project-contribution {
     padding-left: 13px;
-    border-left: 2px solid var(--accent-soft);
+    border-left: 2px solid var(--line);
     font-size: 0.88rem !important;
 }
 
 .project-contribution code {
     padding: 1px 4px;
-    border-radius: 4px;
+    border: 1px solid var(--line);
+    border-radius: 0;
     background: var(--surface-soft);
-    color: var(--accent-dark);
+    color: var(--ink);
     font-family: var(--body-font);
     font-size: 0.9em;
     font-weight: 700;
@@ -579,9 +579,9 @@ button:focus-visible {
 .project-tech span {
     min-height: 27px;
     padding: 3px 9px;
-    border: 0;
-    background: var(--surface-soft);
-    color: var(--accent-dark);
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
     font-size: 0.73rem;
 }
 
@@ -602,15 +602,15 @@ button:focus-visible {
 
 .project-link span,
 .more-projects a span {
-    color: var(--accent);
+    color: #fff;
 }
 
 .project-link:hover {
-    color: var(--accent);
+    color: #fff;
 }
 
 .project-link-primary {
-    color: var(--accent-dark);
+    color: var(--ink);
 }
 
 .project-media {
@@ -618,7 +618,7 @@ button:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
     padding: 13px 13px 0;
-    background: var(--surface-soft);
+    background: var(--surface);
 }
 
 .project-media figure {
@@ -628,8 +628,9 @@ button:focus-visible {
     place-items: center;
     overflow: hidden;
     margin: 0;
-    border-radius: 6px;
-    background: #17141c;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    background: #000;
 }
 
 .project-media img {
@@ -637,7 +638,7 @@ button:focus-visible {
     height: 100%;
     object-fit: contain;
     object-position: top center;
-    background: #17141c;
+    background: #000;
     transition: transform 220ms ease;
 }
 
@@ -652,7 +653,7 @@ button:focus-visible {
 }
 
 .more-projects a {
-    color: var(--accent-dark);
+    color: var(--ink);
     font-weight: 700;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
@@ -660,6 +661,7 @@ button:focus-visible {
 
 .contact-section {
     padding: 88px 0;
+    border-top: 1px solid var(--line);
     background: var(--deep);
     color: #fff;
 }
@@ -676,7 +678,7 @@ button:focus-visible {
 }
 
 .contact-copy .section-kicker {
-    color: #c6a9de;
+    color: var(--muted);
 }
 
 .contact-copy h2 {
@@ -690,12 +692,14 @@ button:focus-visible {
 }
 
 .button-light {
-    background: #e7d9f1;
+    border: 1px solid #fff;
+    background: #fff;
     color: var(--deep);
 }
 
 .button-light:hover {
-    background: #d7c0e8;
+    border-color: #fff;
+    background: #ddd;
 }
 
 .contact-aside {
@@ -725,12 +729,13 @@ button:focus-visible {
 }
 
 .contact-aside a:hover {
-    color: #d4b5eb;
+    color: #fff;
 }
 
 .site-footer {
     padding: 20px 0;
-    background: #1c1425;
+    border-top: 1px solid var(--line);
+    background: var(--page);
     color: var(--deep-muted);
 }
 
@@ -765,14 +770,14 @@ button:focus-visible {
     }
 
     .hero-inner {
-        grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
-        gap: 42px;
+        grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.8fr);
+        gap: 32px;
         padding-top: 70px;
         padding-bottom: 90px;
     }
 
     .hero h1 {
-        font-size: clamp(2.8rem, 7vw, 4rem);
+        font-size: clamp(2rem, 4.8vw, 2.8rem);
     }
 
     .about-layout {
@@ -802,7 +807,7 @@ button:focus-visible {
         justify-items: center;
         gap: 6px;
         border: 1px solid var(--line);
-        border-radius: 7px;
+        border-radius: 0;
         background: var(--surface);
         cursor: pointer;
     }
@@ -860,15 +865,16 @@ button:focus-visible {
         order: 1;
         width: min(68%, 270px);
         justify-self: center;
-        padding: 9px 9px 34px;
+        padding: 0;
+        border-left: 0;
     }
 
     .hero-portrait {
-        aspect-ratio: 0.93;
+        aspect-ratio: 1;
     }
 
     .hero h1 {
-        font-size: clamp(2.6rem, 12vw, 4rem);
+        font-size: clamp(2rem, 9vw, 3rem);
     }
 
     .hero-description {
