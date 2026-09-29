@@ -5,7 +5,7 @@ function closeMenu() {
     if (!menuToggle || !navMenu) return;
 
     menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'Abrir menu');
+    menuToggle.setAttribute('aria-label', 'Abrir navegação');
     navMenu.classList.remove('is-open');
 }
 
@@ -13,7 +13,7 @@ if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
         const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', String(!isOpen));
-        menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+        menuToggle.setAttribute('aria-label', isOpen ? 'Abrir navegação' : 'Fechar navegação');
         navMenu.classList.toggle('is-open', !isOpen);
     });
 

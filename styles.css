@@ -1,16 +1,16 @@
 :root {
-    color-scheme: light;
-    --page: #f7f4f9;
-    --surface: #fff;
-    --surface-soft: #f0ebf4;
-    --ink: #281d31;
-    --muted: #6e6575;
-    --accent: #70449a;
-    --accent-dark: #4f2b72;
-    --accent-soft: #e6daf0;
-    --line: #ded6e5;
-    --deep: #2b1d36;
-    --deep-muted: #d2c5dd;
+    color-scheme: dark;
+    --page: #15121a;
+    --surface: #1d1923;
+    --surface-soft: #25202c;
+    --ink: #f4eef8;
+    --muted: #b8aebb;
+    --accent: #c8a2e8;
+    --accent-dark: #dec7f1;
+    --accent-soft: #463650;
+    --line: #3a3342;
+    --deep: #251a30;
+    --deep-muted: #d0c3d8;
     --content-width: 1120px;
     --heading-font: 'Space Grotesk', sans-serif;
     --body-font: 'DM Sans', sans-serif;
@@ -48,7 +48,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-    outline: 3px solid #a77bd0;
+    outline: 3px solid #d2acef;
     outline-offset: 4px;
 }
 
@@ -78,8 +78,8 @@ button:focus-visible {
     position: sticky;
     z-index: 1000;
     top: 0;
-    border-bottom: 1px solid rgb(40 29 49 / 9%);
-    background: rgb(247 244 249 / 94%);
+    border-bottom: 1px solid rgb(244 238 248 / 10%);
+    background: rgb(21 18 26 / 92%);
     backdrop-filter: blur(14px);
 }
 
@@ -108,7 +108,7 @@ button:focus-visible {
     place-items: center;
     border-radius: 11px 11px 11px 4px;
     background: var(--accent);
-    color: #fff;
+    color: var(--deep);
     font-size: 1.05rem;
 }
 
@@ -179,7 +179,7 @@ button:focus-visible {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #6e9a77;
+    background: #7db98b;
 }
 
 .hero h1,
@@ -236,7 +236,7 @@ button:focus-visible {
 
 .button-primary {
     background: var(--accent);
-    color: #fff;
+    color: var(--deep);
 }
 
 .button-primary:hover {
@@ -277,17 +277,18 @@ button:focus-visible {
     width: min(100%, 330px);
     justify-self: end;
     padding: 12px 12px 38px;
-    border: 1px solid #d5c9df;
+    border: 1px solid #51435d;
     border-radius: 170px 170px 18px 18px;
-    background: #e8dfed;
+    background: #2b2432;
 }
 
 .hero-portrait {
+    display: block;
     width: 100%;
     aspect-ratio: 0.79;
     border-radius: 160px 160px 12px 12px;
     object-fit: cover;
-    object-position: center 36%;
+    object-position: center 40%;
 }
 
 .scroll-cue {
@@ -485,8 +486,8 @@ button:focus-visible {
 
 .project-cover-satellite {
     justify-content: flex-end;
-    background: #dce8eb;
-    color: #203c49;
+    background: #1d2b35;
+    color: #e3f0f3;
 }
 
 .satellite-cover-copy {
@@ -497,11 +498,11 @@ button:focus-visible {
 }
 
 .satellite-cover-copy .project-cover-label {
-    color: #436875;
+    color: #b5d3dc;
 }
 
 .satellite-cover-copy .project-cover-detail {
-    color: #4d6b75;
+    color: #c1d7dc;
 }
 
 .satellite-orbit {
@@ -511,7 +512,7 @@ button:focus-visible {
     width: 265px;
     height: 104px;
     transform: rotate(-30deg);
-    border: 1px solid rgb(50 110 130 / 45%);
+    border: 1px solid rgb(146 204 218 / 45%);
     border-radius: 50%;
 }
 
@@ -521,7 +522,7 @@ button:focus-visible {
     width: 240px;
     height: 120px;
     transform: rotate(42deg);
-    border-color: rgb(50 110 130 / 28%);
+    border-color: rgb(146 204 218 / 28%);
 }
 
 .satellite-point {
@@ -529,7 +530,7 @@ button:focus-visible {
     top: 40px;
     right: 79px;
     z-index: 1;
-    color: #477e8d;
+    color: #9ed1dc;
     font-size: 2.25rem;
 }
 
@@ -617,7 +618,7 @@ button:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
     padding: 13px 13px 0;
-    background: #f2edf5;
+    background: var(--surface-soft);
 }
 
 .project-media figure {
@@ -628,7 +629,7 @@ button:focus-visible {
     overflow: hidden;
     margin: 0;
     border-radius: 6px;
-    background: #e2d9e8;
+    background: #17141c;
 }
 
 .project-media img {
@@ -636,7 +637,7 @@ button:focus-visible {
     height: 100%;
     object-fit: contain;
     object-position: top center;
-    background: #f2edf5;
+    background: #17141c;
     transition: transform 220ms ease;
 }
 
@@ -689,12 +690,12 @@ button:focus-visible {
 }
 
 .button-light {
-    background: #f7f1fb;
+    background: #e7d9f1;
     color: var(--deep);
 }
 
 .button-light:hover {
-    background: #e8d8f3;
+    background: #d7c0e8;
 }
 
 .contact-aside {
@@ -729,7 +730,7 @@ button:focus-visible {
 
 .site-footer {
     padding: 20px 0;
-    background: #21172b;
+    background: #1c1425;
     color: var(--deep-muted);
 }
 
